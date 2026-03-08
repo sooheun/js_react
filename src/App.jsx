@@ -2,8 +2,7 @@ import './App.css';
 
 function Header()
 {
-  return
-  (
+  return (
     <header>
       <h1>header</h1>
     </header>
@@ -12,8 +11,7 @@ function Header()
 
 function App()
 {
-  return
-  (
+  return (
     <div className="App">
       <Header />
     </div>
