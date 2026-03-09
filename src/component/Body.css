@@ -1,0 +1,9 @@
+.body {
+    background-color: green;
+    color: blue;
+}
+
+.body h1 {
+    font-size: 100px;
+    font-family: sans-serif;
+}
