@@ -1,12 +1,10 @@
 import "./Body.css";
 
-function Body()
+function Body(props)
 {
-    return (
-    <div className="body">
-      <h1>body</h1>
-    </div>
-    );
+  const {name, location} = props;
+  console.log(name, location);
+    return <div className="body">{name}은 {location}에 삽니다.</div>
 }
 
 export default Body;
