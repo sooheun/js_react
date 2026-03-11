@@ -2,15 +2,15 @@ import { useState } from "react";
 
 function Body({ children })
 {
-  const [count, setCount] = useState(0);
-  const onIncrease = () => {
-    setCount(count + 1);
+  const [text, setText] = useState("");
+  const handleOnChange = (e) => {
+    setText(e.target.value);
   };
   
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={onIncrease}>+</button>
+      <input value={text} onChange={handleOnChange} />
+      <div>{text}</div>
     </div>
   );
 }
