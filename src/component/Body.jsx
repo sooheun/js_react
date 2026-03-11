@@ -2,9 +2,13 @@ import "./Body.css";
 
 function Body({ children })
 {
-  console.log(children);
+  function handleOnClick() {
+    alert("버튼을 클릭함");
+  }
     return (
-    <div className="body">{children}</div>
+    <div className="body">
+      <button onClick={handleOnClick}>클릭하세요</button>
+    </div>
   );
 }
 
