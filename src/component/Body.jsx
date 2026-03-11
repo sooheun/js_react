@@ -1,15 +1,16 @@
-import "./Body.css";
+import { useState } from "react";
 
 function Body({ children })
 {
-  function handleOnClick(e) {
-    console.log(e);
-    console.log(e.target.name);
-  }
-    return (
-    <div className="body">
-      <button name="A버튼" onClick={handleOnClick}>A버튼</button>
-      <button name="B버튼" onClick={handleOnClick}>B버튼</button>
+  const [count, setCount] = useState(0);
+  const onIncrease = () => {
+    setCount(count + 1);
+  };
+  
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={onIncrease}>+</button>
     </div>
   );
 }
