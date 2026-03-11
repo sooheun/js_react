@@ -3,17 +3,18 @@ import Header from "./component/Header";
 import Body from "./component/Body";
 import Footer from "./component/Footer";
 
+function ChildComp() {
+  return <div>child component</div>
+}
+
 function App()
 {
-  const bodyProps = {
-    name: "이수흔",
-    location: "대구시",
-    favorList: ["파스타", "빵", "떡볶이"]
-  };
   return (
     <div className="App">
       <Header />
-      <Body {...bodyProps} />
+      <Body>
+        <ChildComp />
+      </Body>
       <Footer />
     </div>
   );
