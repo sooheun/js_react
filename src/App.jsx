@@ -1,21 +1,24 @@
 import './App.css';
-import Header from "./component/Header";
-import Body from "./component/Body";
-import Footer from "./component/Footer";
-
-function ChildComp() {
-  return <div>child component</div>
-}
+import { useState } from 'react';
+import  Viewer from "./component/Viewer";
+import Controller from './component/Controller';
 
 function App()
 {
+  const [count, setCount] = useState(0);
+  const handleSetCount = (value) => {
+    setCount(count + value);
+  };
+
   return (
     <div className="App">
-      <Header />
-      <Body>
-        <ChildComp />
-      </Body>
-      <Footer />
+      <h1>Simple Counter</h1>
+      <section>
+        <Viewer count={count} />
+      </section>
+      <section>
+        <Controller handleSetCount={handleSetCount} />
+      </section>
     </div>
   );
 }
